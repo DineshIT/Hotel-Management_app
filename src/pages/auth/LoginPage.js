@@ -66,12 +66,12 @@ function LoginPage() {
         </div>
         <div className="form-outline mb-4">
           <label className="form-label" >Admin Id</label>
-          <input type="text" id="adminId" className="form-control form-control-lg"
-          placeholder="Enter a valid Admin Id" onChange={handleChange} value={state.adminId} />
+          <input type="text" id="adminId" minLength={7} maxLength={7} className="form-control form-control-lg"
+          placeholder="Enter a valid Admin Id" required="" onChange={handleChange} value={state.adminId} />
         </div>
         <div className="form-outline mb-3">
           <label className="form-label" >Password</label>
-          <input type="password" id="password" className="form-control form-control-lg"
+          <input type="password" id="password" required="" maxLength={15} className="form-control form-control-lg"
           placeholder="Enter password" onChange={handleChange} value={state.password}/>
         </div>
         <div className="text-center text-lg-start mt-4 pt-2">
